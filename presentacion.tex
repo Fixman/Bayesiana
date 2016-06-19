@@ -102,26 +102,52 @@ Por investigaciones hechas anteriormente, se sabe que \textbf{el comportamiento 
 
 \end{frame}
 
+\begin{frame}
+
+Empíricamente, los niños no adquieren de manera inmediata un entendimiento de lo que son las falsas creencias cuando son expuestos a evidencia incompatible con una posición CT.
+
+La intuición sugiere que pasar a un modelo más complejo (Perspective Theorist), por la navaja de Occam, requiere evidencia más fuerte.
+\end{frame}
+
 \subsection{Interpretación Bayesiana}
 
 \begin{frame}[fragile]{Una Interpretación Bayesiana}
-Los dos modelos de creencias falsas, el del \textit{Copy Theorist} y el del \textit{Perspective Theorist} se pueden ver como modelos representables en una \textbf{Red Bayesiana}.
+Para formalizar esto, se especifican los dos modelos de creencias falsas, el del \textit{Copy Theorist} y el del \textit{Perspective Theorist}, que se pueden ver como \textbf{Redes Bayesianas}.
 
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.6\textwidth]{imagenes/modelos.jpg}
+\end{figure}
+\end{frame}
+
+\begin{frame}
 \vspace{1em}
 Se usan tres variables observables.
 \begin{description}
-	\item[\texttt{\textbf{W}}] La posición final del juguete (World).
-	\item[\texttt{\textbf{V}}] El acceso visual de Sally a la posición final.
-	\item[\texttt{\textbf{A}}] La acción de Sally al reentrar al cuarto.
+	\item[\texttt{\textbf{W}}] La posición final del juguete (\textbf{World}). 
+	
+	0: Posición original, 1: Posición nueva
+	\item[\texttt{\textbf{V}}] Pudo ver Sally que el juguete fue movido? (\textbf{Access}).
+	
+	0: No, 1: Si
+	\item[\texttt{\textbf{A}}] A dónde va a buscar el juguete Sally (\textbf{Action}).
+	
+	0: Posición original, 1: Posición nueva
 \end{description}
 
 Y cuatro no observables
 \begin{description}
-	\item[\texttt{\textbf{B}}] La ``creencia'' de Sally de donde está el juguete.
-	\item[\texttt{\textbf{D}}] El deseo de Sally de tener el juguete.
+	\item[\texttt{\textbf{B}}] La ``creencia'' de Sally de dónde está el juguete (\textbf{Belief}).
+	
+	0: Posición original, 1: Posición nueva
+	
+	\item[\texttt{\textbf{D}}] El deseo principal de Sally. (\textbf{Desire})
+	
+	1: Encontrar el juguete, 0: Cualquier otra cosa
 	\item[\(\boldsymbol{\varepsilon}\)] Probabilidad a priori de \texttt{\textbf{D}}.
 	\item[\(\boldsymbol{\gamma}\)] Probabilidad a priori de \texttt{\textbf{B}}.
 \end{description}
 \end{frame}
+
 
 \end{document}
