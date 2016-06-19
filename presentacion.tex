@@ -135,7 +135,7 @@ Se usan tres variables observables.
 	0: Posición original, 1: Posición nueva
 \end{description}
 
-Y cuatro no observables
+Y cuatro no observables (representan el estado mental)
 \begin{description}
 	\item[\texttt{\textbf{B}}] La ``creencia'' de Sally de dónde está el juguete (\textbf{Belief}).
 	
@@ -144,9 +144,51 @@ Y cuatro no observables
 	\item[\texttt{\textbf{D}}] El deseo principal de Sally. (\textbf{Desire})
 	
 	1: Encontrar el juguete, 0: Cualquier otra cosa
-	\item[\(\boldsymbol{\varepsilon}\)] Probabilidad a priori de \texttt{\textbf{D}}.
-	\item[\(\boldsymbol{\gamma}\)] Probabilidad a priori de \texttt{\textbf{B}}.
+	
 \end{description}
+\end{frame}
+
+\begin{frame}
+\begin{description}
+	\item[\(\boldsymbol{\varepsilon}\)] Probabilidad a priori de \texttt{\textbf{D}}.
+	\item[\(\boldsymbol{\gamma}\)] Probabilidad a priori de \texttt{\textbf{B}}. Representa todas las razones por las que Sally podría cambiar de opinión: por ej., alguien le dijo que movieron el juguete.
+\end{description}
+
+Ambas tienen priors Beta asimétricos.
+\end{frame}
+
+\begin{frame}
+Las probabilidades condicionales están dadas por la siguiente tabla:
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.6\textwidth]{imagenes/probabilidades_condicionales.jpg}
+\end{figure}
+
+
+La probabilidad condicional para la acción describe el caso de un agente racional: una persona actuará racionalmente, dadas sus creencias, para satisfacer sus deseos.
+\end{frame}
+
+\section{Predicción}
+
+\subsection{Predicción}
+\begin{frame}
+
+Existen 2 situaciones de ejemplo:
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.4\textwidth]{imagenes/situaciones.jpg}
+\end{figure}
+
+En ambos casos W = 1 y V = 0 (el juguete está en la nueva ubicación, Sally no vio que movieron el juguete).
+
+\end{frame}
+
+\begin{frame}
+
+Los modelos hacen predicciones opuestas: 
+
 \end{frame}
 
 
