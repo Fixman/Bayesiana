@@ -4,8 +4,13 @@
 	\usetheme{Warsaw}
 }
 
+\usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{beramono}
+\usepackage{libertine}
+\usepackage{textcomp}
 
 \title{Intuitive Theories of Mind: \\ A Rational Approach to False Belief \\ \vspace{1ex} {\large Un Pequeño Análisis}}
 
@@ -27,10 +32,10 @@
 \begin{frame}[fragile]{Introducción}
 Los niños pequeños suelen tener razonamientos falsos a ciertos problemas que parecen desconcentantes o dificiles de predecir para los adultos.
 
-Esta presentación toma datos del paper de \textbf{Noah Goodman}\cite{goodman92} para demostrar que ambos modelos de razonamiento, tanto el de niños pequeños como el de niños mayores, pueden definirse como modelos Bayesianos de creencias falsas.
+Esta presentación toma datos del paper de \textbf{Noah Goodman}\cite{goodman00} para demostrar que ambos modelos de razonamiento, tanto el de niños pequeños como el de niños mayores, pueden definirse como modelos Bayesianos de creencias falsas.
 \end{frame}
 
-\section{Experimento}
+\section{El Experimento}
 
 \subsection{Pregunta}
 
@@ -77,6 +82,40 @@ Dadas las respuestas a la pregunta, se puede pensar que hay sismtemas de concept
 \end{column}
 \end{columns}
 
+\end{frame}
+
+\subsection{Racionalidad}
+
+\begin{frame}[fragile]
+Por investigaciones hechas anteriormente, se sabe que \textbf{el comportamiento humano es aproximadamente racional dentro de su contexto natural}\cite{anterson90}. Se puede sacar una de dos posibles conclusiones de este estudio:
+
+\begin{itemize}
+\item Una versión \textbf{fuerte}, donde los niños responden y aprenden a travez del desarrollo, y cada etapa de este se puede ver individualmente. Estos cambios son guiados por experiencia.
+\item Una versión \textbf{débil}, donde solo el estado final de madurez es racional, y todos los estados anteriores se consideran irracionales.
+\end{itemize}
+
+\end{frame}
+
+\subsection{Interpretación Bayesiana}
+
+\begin{frame}[fragile]{Una Interpretación Bayesiana}
+Los dos modelos de creencias falsas, el del \textit{Copy Theorist} y el del \textit{Perspective Theorist} se pueden ver como modelos representables en una \textbf{Red Bayesiana}.
+
+\vspace{1em}
+Se usan tres variables observables.
+\begin{description}
+	\item[\texttt{\textbf{W}}] La posición final del juguete (World).
+	\item[\texttt{\textbf{V}}] El acceso visual de Sally a la posición final.
+	\item[\texttt{\textbf{A}}] La acción de Sally al reentrar al cuarto.
+\end{description}
+
+Y cuatro no observables
+\begin{description}
+	\item[\texttt{\textbf{B}}] La ``creencia'' de Sally de donde está el juguete.
+	\item[\texttt{\textbf{D}}] El deseo de Sally de tener el juguete.
+	\item[\(\boldsymbol{\varepsilon}\)] Probabilidad a priori de \texttt{\textbf{D}}.
+	\item[\(\boldsymbol{\gamma}\)] Probabilidad a priori de \texttt{\textbf{B}}.
+\end{description}
 \end{frame}
 
 \end{document}
