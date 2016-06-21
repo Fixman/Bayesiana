@@ -181,7 +181,7 @@ Las probabilidades condicionales están dadas por las siguientes tablas.
 \end{tabular}
 }
 \end{column}
-\begin{column}{.2\textwidth}
+\begin{column}{.17\textwidth}
 \scalebox{.75}{%
 \begin{tabular}{|c|c|}
 \hline
@@ -281,24 +281,16 @@ Si la evidencia se acumula y cambia a $W_{PT/CT}$ para que sea fuertemente posit
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}[fragile]
 
 \begin{figure}
-	\includegraphics[width=0.6\textwidth]{imagenes/log_posterior.jpg}
+\includegraphics[width=\textwidth]{imagenes/log_posterior.png}
+\caption{\( W_{PT/CT} \), evaluada en juicios\footnotemark{} de experiencia. Cada parte consiste en ensayos con \( \left( W, V, A \right) \) observables, pero \( \left( D, B \right) \) ocultos.}
+
+\footnotetext{``\textit{Epoch}'' en el paper, y no encontramos una traducción perfecta}
 \end{figure}
 
 \end{frame}
-
-\begin{frame}
-
-\begin{figure}
-	\includegraphics[width=0.6\textwidth]{imagenes/log_posterior.jpg}
-\end{figure}
-
-Cada época consiste en sucesiones de (W,V,A) observados, y codifican la asunción de que el acceso visual generalmente está disponible, y que, para las instancias en las que no está disponible, el protagonista generalmente tiene la creencia correcta.
-
-\end{frame}
-
 
 
 \end{document}
