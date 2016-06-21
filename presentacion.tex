@@ -290,7 +290,7 @@ Si la evidencia se acumula y cambia a $\WPTCT$ para que sea fuertemente positivo
 
 \alt<1>{%
 \caption{\( \WPTCT \), evaluada en juicios\footnotemark{} de experiencia. Cada parte consiste en ensayos con \( \left( W, V, A \right) \) observables, pero \( \left( D, B \right) \) ocultos.}
-\footnotetext{``\textit{Epoch}'' en el paper, y no encontramos una traducción perfecta}
+\footnotetext{``\textit{Epoch}'' en el paper; no encontramos una traducción perfecta}
 }{}
 \end{figure}
 
@@ -303,5 +303,41 @@ Cuando esta función esté más alejada, las predicciones de la figura~\ref{outc
 
 \end{frame}
 
+\subsection{Explicación Racional}
+
+\begin{frame}{Una Explicación Racional}
+Una manera simple de modelar nuestras explicaciones es introducir el \textbf{modo de ruido explicito}, donde se introducen variables adicionales para que las observaciones vengan de variables no observadas.
+
+Se le agrega la variable \( E_\gamma \) al modelo PT de \textbf{Información Externa}, que tiene probabilidad a priori \( \gamma \) y representa eventos que causan cambios de creencias. Gracias a esto, la inferencia pasa a ser dictada por la distribución a posteriori.
+\end{frame}
+
+\begin{frame}
+Una vez que se agrega \( E_\gamma \), podemos ver que Access (\texttt{\textbf{V}}) y Belief (\texttt{\textbf{B}}) solo son relevantes en el modelo PT\@.
+
+De esta manera, podemos esperar que:
+\begin{itemize}
+	\item<2-3> Los \textbf{Copy Theorists} apelarán principalmente al deseo de Sally de tener el juguete.
+	\item<3-3> Los \textbf{Predictive Theorists} apelarán a la creencia de Sally sobre la posición del juguete, y si puede ver que este juguete se movió.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+\begin{columns}
+\begin{column}{.5\textwidth}
+\includegraphics[width=\textwidth]{imagenes/surprise_posterior_standard.png}
+\end{column}
+\begin{column}{.5\textwidth}
+\includegraphics[width=\textwidth]{imagenes/surprise_posterior_psychic.png}
+\end{column}
+\end{columns}
+\caption{Valor de sorpresa en cada configuración}
+\end{figure}
+
+\vspace{-2em}
+
+Cuando hay una sorpresa en alguno de los experimentos, los Copy~Theorists asumen que Sally no quería el juguete, mientras que los Predictive~Theorists asumen que Sally sabía que el juguete estaba en la caja
+
+\end{frame}
 
 \end{document}
