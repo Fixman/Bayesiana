@@ -204,7 +204,7 @@ Los modelos hacen predicciones opuestas:
 
 \begin{minipage}{0.5\textwidth}
 \begin{figure}[H]
-\includegraphics[width=0.5\textwidth]{imagenes/fig_b.jpg}
+	\includegraphics[width=0.5\textwidth]{imagenes/fig_b.jpg}
 \end{figure}
 \end{minipage} \hfill
 \begin{minipage}{0.45\textwidth}
@@ -214,6 +214,52 @@ El modelo CT ``falla''   el test de falsa creencia prediciendo que Sally va a bu
 
 
 \end{frame}
+
+\begin{frame}
+La racionalidad fuerte requiere que el agente haga un balance entre las teorías disponibles.
+
+Se define el grado de creencia en cada modelo como su probabilidad a posteriori dada la experiencia previa:
+
+~\\
+{\Large
+$W_{PT/CT} = log(P(PT|X)/P(CT|X))$
+}
+
+\end{frame}
+
+
+\begin{frame}
+
+{\Large
+$W_{PT/CT} = log(P(PT|X)/P(CT|X))$
+\\
+}
+~\\
+
+Cuando $W_{PT/CT}$ es muy negativo, el agente se comporta como si fuera un Copy Theorist puro. Si la evidencia se acumula y $W_{PT/CT}$ se vuelve muy positivo, el agente se comporta como un Perspective Theorist.
+
+
+\end{frame}
+
+
+\begin{frame}
+
+\begin{figure}
+	\includegraphics[width=0.6\textwidth]{imagenes/log_posterior.jpg}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+
+\begin{figure}
+	\includegraphics[width=0.6\textwidth]{imagenes/log_posterior.jpg}
+\end{figure}
+
+Cada época consiste en sucesiones de (W,V,A) observados, y codifican la asunción de que el acceso visual generalmente está disponible, y que, para las instancias en las que no está disponible, el protagonista generalmente tiene la creencia correcta.
+
+\end{frame}
+
 
 
 \end{document}
