@@ -20,6 +20,8 @@
 
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 
+\newcommand{\WPTCT}{W_{\operatorname{PT}/\operatorname{CT}}}
+
 \title[Intuitive Theories of Mind: A Rational Approach to False Belief]{Intuitive Theories of Mind: \\ A Rational Approach to False Belief \\ \vspace{1ex} {\large Un Pequeño Análisis}}
 
 \author[Grupo 10]{%
@@ -217,16 +219,16 @@ La probabilidad condicional para la acción describe el caso de un agente racion
 \section{Predicción}
 
 \subsection{Predicción}
-\begin{frame}
+\begin{frame}{La Predicción}
 
 Existen 2 situaciones de ejemplo:
 
-\begin{figure}[h!]
-  \centering
-    \includegraphics[width=0.4\textwidth]{imagenes/situaciones.jpg}
+\begin{figure}
+% TODO: Rehacer esto horizontalmente.
+\includegraphics[height=0.65\textheight]{imagenes/situaciones.jpg}
+\caption{En ambos casos W = 1 y V = 0 (el juguete está en la nueva ubicación, Sally no vio que movieron el juguete)}
+\label{outcome}
 \end{figure}
-
-En ambos casos W = 1 y V = 0 (el juguete está en la nueva ubicación, Sally no vio que movieron el juguete).
 
 \end{frame}
 
@@ -259,23 +261,23 @@ Los modelos hacen predicciones opuestas:
 El modelo CT ``falla''   el test de falsa creencia prediciendo que Sally va a buscar el juguete en la \textbf{nueva} ubicación, mientras que el modelo PT ``pasa''   el test prediciendo la ubicación original.
 \end{minipage}
 
-
-
 \end{frame}
 
-\begin{frame}
+\subsection{Grado de Creencia}
+
+\begin{frame}{Grado de Creencia}
 La racionalidad fuerte requiere que el agente haga un balance entre las teorías disponibles.
 
 Se define el grado de creencia en cada modelo como su probabilidad a posteriori tomando \( X \) como la experiencia previa.
 
 \[
-W_{PT/CT} = \log \left( P \left( PT \mid X \right) / P \left( CT \mid X \right) \right)
+\WPTCT = \log \left( P \left( PT \mid X \right) / P \left( CT \mid X \right) \right)
 \]
 
 \alt<2>{%
-Cuando $W_{PT/CT}$ es fuertemente negativo, la contrubución de \( PT \) es insignificante, y el agente se comporta como si fuese un \textbf{Copy Theorist}.
+Cuando $\WPTCT$ es fuertemente negativo, la contrubución de \( PT \) es insignificante, y el agente se comporta como si fuese un \textbf{Copy Theorist}.
 
-Si la evidencia se acumula y cambia a $W_{PT/CT}$ para que sea fuertemente positivo, el agente se comporta como un \textbf{Perspective Theorist}.
+Si la evidencia se acumula y cambia a $\WPTCT$ para que sea fuertemente positivo, el agente se comporta como un \textbf{Perspective Theorist}.
 }{}
 
 \end{frame}
@@ -285,10 +287,19 @@ Si la evidencia se acumula y cambia a $W_{PT/CT}$ para que sea fuertemente posit
 
 \begin{figure}
 \includegraphics[width=\textwidth]{imagenes/log_posterior.png}
-\caption{\( W_{PT/CT} \), evaluada en juicios\footnotemark{} de experiencia. Cada parte consiste en ensayos con \( \left( W, V, A \right) \) observables, pero \( \left( D, B \right) \) ocultos.}
 
+\alt<1>{%
+\caption{\( \WPTCT \), evaluada en juicios\footnotemark{} de experiencia. Cada parte consiste en ensayos con \( \left( W, V, A \right) \) observables, pero \( \left( D, B \right) \) ocultos.}
 \footnotetext{``\textit{Epoch}'' en el paper, y no encontramos una traducción perfecta}
+}{}
 \end{figure}
+
+\alt<2>{%
+\vspace{-1em}
+Cuando \( \WPTCT \) esté cerca del límite, las inferencias van a ser mixtas y van a ser mucho más sensibles a la evidencia.
+
+Cuando esta función esté más alejada, las predicciones de la figura~\ref{outcome} van a ser consistentes.
+}{}
 
 \end{frame}
 
