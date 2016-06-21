@@ -172,7 +172,7 @@ Las probabilidades condicionales están dadas por las siguientes tablas.
 \scalebox{.75}{%
 \begin{tabular}{|c|c|c|}
 \hline
-\(P(A = 1 | B, D)\) & \(B\) & \(D\) \\ \hline
+\(P(A = 1 \mid B, D)\) & \(B\) & \(D\) \\ \hline
 \(0\) & \(0\) & \(1\) \\
 \(1\) & \(1\) & \(1\) \\
 \(0.5\) & \(0\) & \(0\) \\
@@ -266,23 +266,17 @@ El modelo CT ``falla''   el test de falsa creencia prediciendo que Sally va a bu
 \begin{frame}
 La racionalidad fuerte requiere que el agente haga un balance entre las teorías disponibles.
 
-Se define el grado de creencia en cada modelo como su probabilidad a posteriori dada la experiencia previa:
+Se define el grado de creencia en cada modelo como su probabilidad a posteriori tomando \( X \) como la experiencia previa.
 
 \[
-W_{PT/CT} = \log(P(PT|X)/P(CT|X))
+W_{PT/CT} = \log \left( P \left( PT \mid X \right) / P \left( CT \mid X \right) \right)
 \]
 
-\end{frame}
+\alt<2>{%
+Cuando $W_{PT/CT}$ es fuertemente negativo, la contrubución de \( PT \) es insignificante, y el agente se comporta como si fuese un \textbf{Copy Theorist}.
 
-
-\begin{frame}
-
-\[
-W_{PT/CT} = \log(P(PT|X)/P(CT|X))
-\]
-
-Cuando $W_{PT/CT}$ es muy negativo, el agente se comporta como si fuera un Copy Theorist puro. Si la evidencia se acumula y $W_{PT/CT}$ se vuelve muy positivo, el agente se comporta como un Perspective Theorist.
-
+Si la evidencia se acumula y cambia a $W_{PT/CT}$ para que sea fuertemente positivo, el agente se comporta como un \textbf{Perspective Theorist}.
+}{}
 
 \end{frame}
 
