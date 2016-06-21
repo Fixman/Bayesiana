@@ -11,9 +11,13 @@
 \usepackage{beramono}
 \usepackage{textcomp}
 \usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{booktabs}
 
 \setbeamertemplate{caption}[numbered]
 \setbeamerfont{caption}{size=\footnotesize}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
 
 \title[Intuitive Theories of Mind: A Rational Approach to False Belief]{Intuitive Theories of Mind: \\ A Rational Approach to False Belief \\ \vspace{1ex} {\large Un Pequeño Análisis}}
 
@@ -160,13 +164,42 @@ Asumimos que ambas tienen priors Beta asimétricos.
 \begin{frame}
 Las probabilidades condicionales están dadas por la siguiente tabla:
 
-\begin{figure}[h!]
-  \centering
-    \includegraphics[width=0.6\textwidth]{imagenes/probabilidades_condicionales.jpg}
-\end{figure}
-
+\begin{columns}
+\begin{column}{.1\textwidth}
+\begin{tabular}{|c|c|c|}
+\hline
+\(P(A = 1 | B, D)\) & \(B\) & \(D\) \\ \hline
+\(0\) & \(0\) & \(1\) \\
+\(1\) & \(1\) & \(1\) \\
+\(0.5\) & \(0\) & \(0\) \\
+\(0.5\) & \(1\) & \(0\) \\
+\hline
+\end{tabular}
+\end{column}
+\begin{column}{.1\textwidth}
+\end{column}
+\begin{tabular}{|c|c|}
+\hline
+\( P_{CT} \left( B = 1 \mid W \right) \) & \( W \) \\ \hline
+\( 0 \) & \( 0 \) \\
+\( 1 \) & \( 1 \) \\
+\hline
+\end{tabular}
+\begin{column}{.1\textwidth}
+\begin{tabular}{|c|c|c|}
+\hline
+\( P_{PT} \left( B = 1 \mid W, V \right) \) & \( W \) & \( V \) \\ \hline
+\( 0 \) & \( 0 \) & \( 1 \) \\
+\( 1 \) & \( 1 \) & \( 1 \) \\
+\( \gamma \) & \( 0 \) & \( 0 \) \\
+\( \gamma \) & \( 1 \) & \( 0 \) \\
+\hline
+\end{tabular}
+\end{column}
+\end{columns}
 
 La probabilidad condicional para la acción describe el caso de un agente racional: una persona actuará racionalmente, dadas sus creencias, para satisfacer sus deseos.
+
 \end{frame}
 
 \section{Predicción}
