@@ -12,6 +12,9 @@
 \usepackage{textcomp}
 \usepackage{amsmath}
 
+\setbeamertemplate{caption}[numbered]
+\setbeamerfont{caption}{size=\footnotesize}
+
 \title[Intuitive Theories of Mind: A Rational Approach to False Belief]{Intuitive Theories of Mind: \\ A Rational Approach to False Belief \\ \vspace{1ex} {\large Un Pequeño Análisis}}
 
 \author[Grupo 10]{%
@@ -114,9 +117,9 @@ La intuición sugiere que pasar a un modelo más complejo (Perspective Theorist)
 \begin{frame}[fragile]{Una Interpretación Bayesiana}
 Para formalizar esto, se especifican los dos modelos de creencias falsas, el del \textit{Copy Theorist} y el del \textit{Perspective Theorist}, que se pueden ver como \textbf{Redes Bayesianas}.
 
-\begin{figure}[h!]
-  \centering
-    \includegraphics[width=0.6\textwidth]{imagenes/modelos.jpg}
+\begin{figure}
+\includegraphics[width=0.6\textwidth]{imagenes/modelos.png}
+\caption{Grafos de dependencia de nuestro modelo bayesiano. \textbf{(a)}: modelo CT \textbf{(b)} modelo PT.}
 \end{figure}
 \end{frame}
 
@@ -138,7 +141,7 @@ Y cuatro no observables (representan el estado mental)
 \begin{description}
 	\item[\texttt{\textbf{B}}] La ``creencia'' de Sally de la locación del juguete (\textbf{Belief}). \\
 		0 \textrightarrow{} Posición original, 1 \textrightarrow{} Posición nueva
-	
+
 	\item[\texttt{\textbf{D}}] El deseo principal de Sally. (\textbf{Desire}) \\
 		1 \textrightarrow{}  Encontrar el juguete, 0 \textrightarrow{}  Cualquier otra cosa
 
@@ -151,7 +154,7 @@ Y cuatro no observables (representan el estado mental)
 	\item[\(\boldsymbol{\gamma}\)] Probabilidad a priori de \texttt{\textbf{B}}. Representa todas las razones por las que Sally podría cambiar de opinión: por ej., alguien le dijo que movieron el juguete.
 \end{description}
 
-Ambas tienen priors Beta asimétricos.
+Asumimos que ambas tienen priors Beta asimétricos.
 \end{frame}
 
 \begin{frame}
@@ -184,7 +187,7 @@ En ambos casos W = 1 y V = 0 (el juguete está en la nueva ubicación, Sally no 
 
 \begin{frame}
 
-Los modelos hacen predicciones opuestas: 
+Los modelos hacen predicciones opuestas:
 %
 %\begin{minipage}{0.1\textwidth}
 %\begin{figure}
@@ -196,7 +199,7 @@ Los modelos hacen predicciones opuestas:
 %%TEXTO AL LADO
 %\begin{minipage}[t]{\textwidth}
 %  \begin{flushright}
-%      El modelo CT 
+%      El modelo CT
 %
 %  \end{flushright}
 %\end{minipage}
@@ -220,21 +223,18 @@ La racionalidad fuerte requiere que el agente haga un balance entre las teorías
 
 Se define el grado de creencia en cada modelo como su probabilidad a posteriori dada la experiencia previa:
 
-~\\
-{\Large
-$W_{PT/CT} = log(P(PT|X)/P(CT|X))$
-}
+\[
+W_{PT/CT} = \log(P(PT|X)/P(CT|X))
+\]
 
 \end{frame}
 
 
 \begin{frame}
 
-{\Large
-$W_{PT/CT} = log(P(PT|X)/P(CT|X))$
-\\
-}
-~\\
+\[
+W_{PT/CT} = \log(P(PT|X)/P(CT|X))
+\]
 
 Cuando $W_{PT/CT}$ es muy negativo, el agente se comporta como si fuera un Copy Theorist puro. Si la evidencia se acumula y $W_{PT/CT}$ se vuelve muy positivo, el agente se comporta como un Perspective Theorist.
 
